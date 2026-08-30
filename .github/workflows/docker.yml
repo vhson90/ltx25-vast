@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - main
-
   workflow_dispatch:
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -18,9 +15,29 @@ jobs:
       packages: write
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Show disk before cleanup
+        run: df -h
+
+      - name: Free disk space
+        run: |
+          echo "Removing unnecessary preinstalled software..."
+
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/.ghcup
+          sudo rm -rf /opt/hostedtoolcache/CodeQL
+          sudo rm -rf /usr/local/share/boost
+
+          sudo apt-get clean
+
+          docker system prune -af || true
+
+          echo "Disk after cleanup:"
+          df -h
 
       - name: Login to GHCR
         uses: docker/login-action@v3
@@ -37,6 +54,7 @@ jobs:
         with:
           context: .
           push: true
+          no-cache: true
           tags: |
             ghcr.io/${{ github.repository_owner }}/ltx25-vast:latest
             ghcr.io/${{ github.repository_owner }}/ltx25-vast:0.1
