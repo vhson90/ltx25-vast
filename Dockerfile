@@ -3,6 +3,7 @@ FROM vastai/pytorch:2.6.0-cuda-12.6.3-py312
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 ENV HF_HOME=/workspace/hf-cache
+ENV PIP_NO_CACHE_DIR=1
 
 RUN apt-get update && apt-get install -y \
     git \
