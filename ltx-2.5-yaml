@@ -1,1 +1,18 @@
+version: 1
+extensions:
+  - module: provisioner_comfyui
+    config:
+      workflows:
+        - https://raw.githubusercontent.com/vhson90/ltx25-vast/refs/heads/main/LTX-2.5_IA2V_8Models_PreDownload.json
 
+downloads:
+  - url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/cactus_man.png
+    dest: ${WORKSPACE}/ComfyUI/input/cactus_man.png
+  - url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/high_view_classic_car.png
+    dest: ${WORKSPACE}/ComfyUI/input/high_view_classic_car.png
+  - url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/low_view_classic_car.png
+    dest: ${WORKSPACE}/ComfyUI/input/low_view_classic_car.png
+  - url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/egyptian_queen.png
+    dest: ${WORKSPACE}/ComfyUI/input/egyptian_queen.png
+  - url: https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/input/ltx_23_audio.mp3
+    dest: ${WORKSPACE}/ComfyUI/input/ltx_23_audio.mp3
