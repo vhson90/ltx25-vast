@@ -143,11 +143,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "ChatGPT Image 07_02_26 19 thg 9, 2026.png",
+        "cactus_man.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "ChatGPT Image 07_02_26 19 thg 9, 2026.png",
+        "image": "cactus_man.png",
         "upload": "image"
       },
       "color": "#232",
@@ -231,12 +231,12 @@
         "Node name for S&R": "LoadAudio"
       },
       "widgets_values": [
-        "Te Llevo Conmigo_d4779c51_doan_1_30.0s.mp3",
+        "ltx_23_audio.mp3",
         null,
         null
       ],
       "widgets_values_named": {
-        "audio": "Te Llevo Conmigo_d4779c51_doan_1_30.0s.mp3",
+        "audio": "ltx_23_audio.mp3",
         "upload": null
       },
       "color": "#232",
